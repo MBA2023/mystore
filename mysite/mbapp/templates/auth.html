@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{%  static '/css/auth.css' %}" rel="stylesheet">
+    <title>Вход</title>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Вход</h2>
+        <form method="post" >
+          {% csrf_token %}
+          <div class="user-box">
+            <input type="text" name="user" required>
+            <label>Имя пользователя</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="password" required>
+            <label>Пароль</label>
+          </div>
+            <button type="submit" style="top: 0;
+            left: -100%;
+            width: 100%;
+            height: 30px;
+            background: linear-gradient(90deg, transparent, #fe671c);">Войти</button>
+        </form>
+      </div>
+</body>
+</html>
